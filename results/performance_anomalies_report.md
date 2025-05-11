@@ -1,0 +1,202 @@
+# Performance Anomalies Report
+
+This report summarizes potential performance anomalies identified from the extracted Perfetto trace data.
+
+## Perf Samples Skipped Analysis
+- No explicit "perf_samples_skipped" metadata found. This doesn't guarantee no samples were skipped, but the specific counter is absent.
+
+## Long Tasks on com.google.android.youtube - com.google.android.youtube:main Analysis
+- No long tasks (>16ms) recorded in the provided CSV for com.google.android.youtube:main.
+
+## High Runnable Time for YouTube Threads Analysis
+- Identified YouTube threads spending a significant portion of active time in a runnable state (waiting for CPU, ratio > 20.0%):
+  - **Thread: ExoPlayer:Playb**
+    - Total Running Time: 478.17 ms
+    - Total Runnable Time: 204.67 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 29.97%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: binder:23019_8**
+    - Total Running Time: 120.42 ms
+    - Total Runnable Time: 41.09 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 25.44%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: binder:23019_5**
+    - Total Running Time: 103.89 ms
+    - Total Runnable Time: 32.81 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 24.00%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: binder:23019_9**
+    - Total Running Time: 72.10 ms
+    - Total Runnable Time: 20.69 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 22.30%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: BG Thread #3**
+    - Total Running Time: 61.36 ms
+    - Total Runnable Time: 38.12 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 38.32%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: binder:23019_2**
+    - Total Running Time: 54.34 ms
+    - Total Runnable Time: 15.40 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 22.08%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: binder:23019_7**
+    - Total Running Time: 49.54 ms
+    - Total Runnable Time: 18.03 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 26.69%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: binder:23019_4**
+    - Total Running Time: 41.11 ms
+    - Total Runnable Time: 29.67 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 41.92%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: CodecLooper**
+    - Total Running Time: 34.06 ms
+    - Total Runnable Time: 37.46 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 52.38%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: mdxSsdp9-3**
+    - Total Running Time: 27.82 ms
+    - Total Runnable Time: 7.64 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 21.53%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: BG Thread #10**
+    - Total Running Time: 19.32 ms
+    - Total Runnable Time: 8.17 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 29.72%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: mdxSsdp9-1**
+    - Total Running Time: 5.56 ms
+    - Total Runnable Time: 7.75 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 58.22%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: yt-critical Thr**
+    - Total Running Time: 2.13 ms
+    - Total Runnable Time: 0.58 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 21.27%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: yt-critical Thr**
+    - Total Running Time: 2.13 ms
+    - Total Runnable Time: 0.61 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 22.27%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: mdxSsdp9-2**
+    - Total Running Time: 2.04 ms
+    - Total Runnable Time: 2.12 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 50.92%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: Lite Thread #1**
+    - Total Running Time: 1.80 ms
+    - Total Runnable Time: 0.50 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 21.71%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: mali-event-hand**
+    - Total Running Time: 1.16 ms
+    - Total Runnable Time: 1.07 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 48.02%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: CCodecWatchdog**
+    - Total Running Time: 0.36 ms
+    - Total Runnable Time: 0.40 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 52.31%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: CodecLooper**
+    - Total Running Time: 0.36 ms
+    - Total Runnable Time: 0.39 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 52.05%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: yt-critical Thr**
+    - Total Running Time: 0.31 ms
+    - Total Runnable Time: 0.70 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 69.26%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: yt-critical Thr**
+    - Total Running Time: 0.23 ms
+    - Total Runnable Time: 0.22 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 48.83%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: BG Thread #5**
+    - Total Running Time: 0.21 ms
+    - Total Runnable Time: 0.09 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 29.49%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: BG Thread #8**
+    - Total Running Time: 0.12 ms
+    - Total Runnable Time: 0.07 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 38.00%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+  - **Thread: binder:23019_6**
+    - Total Running Time: 0.05 ms
+    - Total Runnable Time: 0.08 ms
+    - Runnable Ratio (Runnable / (Runnable+Running)): 61.42%
+    - High runnable time suggests CPU contention and can lead to performance bottlenecks and jank.
+
+## YouTube Thread CPU Core Placement Analysis
+- Assuming LITTLE cores: [0, 1, 2, 3], BIG cores: [4, 5, 6, 7] for this analysis. (This should be verified with device specs or detailed trace metadata if possible).
+- Critical YouTube threads spent **29.19%** of their CPU time on assumed LITTLE cores (4.76 ms out of 16.32 ms).
+  - Running critical tasks on LITTLE cores can lead to slower performance and jank, especially if BIG cores were available.
+
+## CPU Spikes Analysis
+- Overall trace duration considered for CPU usage: 5121.77 ms.
+- Top 5 CPU consuming processes (total duration):
+  - **com.google.android.youtube**: 2853.61 ms
+  - **/system/bin/surfaceflinger**: 1195.89 ms
+  - **/vendor/bin/hw/google.hardware.media.c2@2.0-service**: 824.59 ms
+  - **/vendor/bin/hw/android.hardware.composer.hwc3-service.pixel**: 777.50 ms
+  - **/system/bin/traced_probes**: 366.53 ms
+- 'com.google.android.youtube' consumed 2853.61 ms of CPU time in total.
+- Note: A more detailed spike analysis would involve windowing and looking for sudden bursts of activity.
+
+## Frequent Short Runs Followed by Sleep Analysis (Potential I/O or Lock Contention)
+- Identified threads with frequent short CPU runs (>100 instances, each <5.0ms), which *might* indicate I/O waits or lock contention if followed by sleep states:
+  - Process: **/system/bin/audioserver**, Thread: **AudioOut_15** - Short Run Count: 132
+  - Process: **/system/bin/logd**, Thread: **logd.writer** - Short Run Count: 387
+  - Process: **/system/bin/surfaceflinger**, Thread: **BckgrndExec HP** - Short Run Count: 616
+  - Process: **/system/bin/surfaceflinger**, Thread: **TimerDispatch** - Short Run Count: 308
+  - Process: **/system/bin/surfaceflinger**, Thread: **binder:477_4** - Short Run Count: 344
+  - Process: **/system/bin/surfaceflinger**, Thread: **surfaceflinger** - Short Run Count: 803
+  - Process: **/system/bin/traced_perf**, Thread: **traced_perf** - Short Run Count: 119
+  - Process: **/system/bin/traced_probes**, Thread: **traced_probes** - Short Run Count: 275
+  - Process: **/vendor/bin/hw/android.hardware.audio.service-aidl.aoc**, Thread: **cw-deep-buffer-** - Short Run Count: 260
+  - Process: **/vendor/bin/hw/android.hardware.composer.hwc3-service.pixel**, Thread: **VrrCtrl_Primary** - Short Run Count: 329
+  - Process: **/vendor/bin/hw/android.hardware.composer.hwc3-service.pixel**, Thread: **binder:479_3** - Short Run Count: 273
+  - Process: **/vendor/bin/hw/android.hardware.composer.hwc3-service.pixel**, Thread: **binder:479_5** - Short Run Count: 233
+  - Process: **/vendor/bin/hw/android.hardware.health-service.zumapro**, Thread: **android.hardwar** - Short Run Count: 129
+  - Process: **/vendor/bin/hw/android.hardware.power-service.pixel-libperfmgr**, Thread: **android.hardwar** - Short Run Count: 362
+  - Process: **/vendor/bin/hw/android.hardware.sensors-service.multihal**, Thread: **DisplayInfo** - Short Run Count: 170
+  - Process: **/vendor/bin/hw/google.hardware.media.c2@2.0-service**, Thread: **Codec2.0 Looper** - Short Run Count: 462
+  - Process: **/vendor/bin/hw/google.hardware.media.c2@2.0-service**, Thread: **DecodeLoop** - Short Run Count: 1546
+  - Process: **/vendor/bin/hw/google.hardware.media.c2@2.0-service**, Thread: **GC2PerfHintThre** - Short Run Count: 346
+  - Process: **/vendor/bin/hw/google.hardware.media.c2@2.0-service**, Thread: **Output Looper** - Short Run Count: 312
+  - Process: **/vendor/bin/hw/google.hardware.media.c2@2.0-service**, Thread: **binder:843_2** - Short Run Count: 314
+  - Process: **bigo_worker_thread**, Thread: **bigo_worker_thr** - Short Run Count: 682
+  - Process: **com.google.android.gms.persistent**, Thread: **lowpool[81]** - Short Run Count: 191
+  - Process: **com.google.android.youtube**, Thread: **BG Thread #3** - Short Run Count: 172
+  - Process: **com.google.android.youtube**, Thread: **ChromiumNet** - Short Run Count: 179
+  - Process: **com.google.android.youtube**, Thread: **CodecLooper** - Short Run Count: 546
+  - Process: **com.google.android.youtube**, Thread: **ExoPlayer:Playb** - Short Run Count: 2291
+  - Process: **com.google.android.youtube**, Thread: **ExoPlayer:Simpl** - Short Run Count: 151
+  - Process: **com.google.android.youtube**, Thread: **MediaCodec_loop** - Short Run Count: 2638
+  - Process: **com.google.android.youtube**, Thread: **android.youtube** - Short Run Count: 137
+  - Process: **com.google.android.youtube**, Thread: **binder:23019_2** - Short Run Count: 179
+  - Process: **com.google.android.youtube**, Thread: **binder:23019_4** - Short Run Count: 324
+  - Process: **com.google.android.youtube**, Thread: **binder:23019_5** - Short Run Count: 318
+  - Process: **com.google.android.youtube**, Thread: **binder:23019_7** - Short Run Count: 165
+  - Process: **com.google.android.youtube**, Thread: **binder:23019_8** - Short Run Count: 422
+  - Process: **com.google.android.youtube**, Thread: **binder:23019_9** - Short Run Count: 272
+  - Process: **decon0_kthread**, Thread: **decon0_kthread** - Short Run Count: 922
+  - Process: **ksoftirqd/4**, Thread: **ksoftirqd/4** - Short Run Count: 453
+  - Process: **ksoftirqd/5**, Thread: **ksoftirqd/5** - Short Run Count: 241
+  - Process: **ksoftirqd/7**, Thread: **ksoftirqd/7** - Short Run Count: 161
+  - Process: **kworker/4:0**, Thread: **kworker/4:0** - Short Run Count: 516
+  - Process: **kworker/5:0**, Thread: **kworker/5:0** - Short Run Count: 305
+  - Process: **kworker/7:17**, Thread: **kworker/7:17** - Short Run Count: 283
+  - Process: **kworker/u17:0**, Thread: **kworker/u17:0** - Short Run Count: 164
+  - Process: **mali-gpuq-kthread**, Thread: **mali-gpuq-kthre** - Short Run Count: 169
+  - Process: **mali_apc_thread**, Thread: **mali_apc_thread** - Short Run Count: 130
+  - Process: **perf_mon_update_client_task**, Thread: **perf_mon_update** - Short Run Count: 302
+  - Process: **simpleinteractive**, Thread: **simpleinteracti** - Short Run Count: 117
+  - Process: **sugov:0**, Thread: **sugov:0** - Short Run Count: 418
+  - Process: **sugov:4**, Thread: **sugov:4** - Short Run Count: 394
+  - Deeper analysis is needed to confirm if these short runs are consistently followed by sleep states indicative of I/O or lock waits.
+
