@@ -1,6 +1,6 @@
 _No response was specified_
 
-# Perfetto Trace Analysis for Performance Recruitment Task
+# Perfetto Trace Analysis 
 
 This repository contains the analysis of a Perfetto trace file, focusing on identifying performance anomalies and understanding system behavior. The project was undertaken as part of a recruitment task and demonstrates a methodical approach to trace analysis using Python scripts for data extraction and processing, culminating in a presentation of the findings.
 
