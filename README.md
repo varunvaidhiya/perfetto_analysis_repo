@@ -176,47 +176,5 @@ This section addresses some common issues that might arise when trying to replic
 If you encounter issues not covered here, carefully review the error messages, check the script logic, and ensure your environment matches the one described in the "How to Replicate" section. Examining the intermediate CSV files can also help diagnose problems if the data being passed between scripts is not as expected.
 
 
-## Contributing
 
-This project was developed as a specific recruitment task and is presented as a completed analysis. As such, direct contributions to this specific iteration of the project are not actively sought. However, the methodologies and scripts provided herein can serve as a foundation or inspiration for other Perfetto trace analysis tasks. If you adapt these scripts for your own projects or develop improvements or extensions, you are encouraged to fork this repository (if made public) and build upon it. For general feedback or if you identify critical errors in the provided scripts or documentation, please raise an issue on the GitHub repository page if one is created by the user.
-
-If this project were to be developed further as an open-source tool, a more formal contribution process would be established, likely involving pull requests, code reviews, and issue tracking. For now, any enhancements or bug fixes you develop are for your own use or for sharing within your own forks or related projects. We appreciate your understanding that the scope of this repository is primarily to showcase the work done for the recruitment task.
-
-## License
-
-This project, including the Python scripts and documentation, is provided for demonstration and educational purposes as part of a recruitment process. As the nature of the original trace file and the context of the recruitment task may have specific confidentiality or usage restrictions, no explicit open-source license is applied by default to the entirety of this work at this moment.
-
-If you intend to use or adapt the scripts or methodologies presented here for your own purposes, please be mindful of the following:
-
-*   The Python scripts themselves, in terms of the code written for parsing and analysis (excluding any third-party libraries which have their own licenses), can be considered as examples. If you wish to use them, it is recommended to understand their functionality thoroughly and adapt them as needed.
-*   The `PerfettoTraceForRecruitment` data file is specific to the task and should not be redistributed or used outside the context for which it was provided, unless explicit permission is granted by its originators.
-
-For any broader use or distribution of the materials in this repository, it would be advisable to consider applying a standard open-source license (such as MIT, Apache 2.0, or GPL, depending on the desired terms) if the original content provider and the author (the user who initiated this task) agree to make it publicly available under such terms. For now, all rights are implicitly reserved, pending clarification on the intended public use and licensing by the user who owns the original task and data.
-
-It is recommended that the user who owns this repository choose an appropriate open-source license if they decide to make this repository public on platforms like GitHub. A common choice for such projects is the MIT License, which is permissive and allows for broad reuse while disclaiming liability. A placeholder for an MIT License might look like:
-
-```
-MIT License
-
-Copyright (c) [Year] [Your Name/Organization]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-This should be replaced with a proper license file if the repository is made public.
 
