@@ -137,11 +137,6 @@ All scripts should be run from the `scripts` directory. The commands below assum
     python3 create_presentation.py ../results/system_info.csv ../results/cpu_sched_slices.csv ../results/thread_states.csv ../results/long_running_tasks_youtube_main.csv ../results/youtube_thread_cpu_states.csv ../results/performance_anomalies_report.md ../results/top_processes_cpu_usage.png "../results/Consolidated Presentation Guide_ Perfetto Trace Analysis (Revised).md" ../results/Perfetto_Trace_Analysis_Presentation.pptx
     ```
 
-**3. Verifying Results:**
-
-After running all the scripts, you can find the generated output files in the `../results/` directory. You can compare these with the pre-existing files in the repository to verify that your replication was successful. The `Perfetto_Trace_Analysis_Presentation.pptx` will be the final consolidated output.
-
-By following these steps, you should be able to replicate the entire analysis pipeline from the raw trace file to the final presentation. Ensure that the paths to input and output files are correctly specified if you deviate from the described directory structure.
 
 
 
