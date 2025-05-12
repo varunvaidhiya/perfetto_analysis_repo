@@ -144,35 +144,4 @@ After running all the scripts, you can find the generated output files in the `.
 By following these steps, you should be able to replicate the entire analysis pipeline from the raw trace file to the final presentation. Ensure that the paths to input and output files are correctly specified if you deviate from the described directory structure.
 
 
-## Troubleshooting
-
-This section addresses some common issues that might arise when trying to replicate the analysis or run the scripts.
-
-*   **Python or Library Issues:**
-    *   **`ModuleNotFoundError`**: If you encounter this error, it means a required Python library is not installed or not found in your current Python environment. Ensure you have activated your virtual environment (if you created one) and have installed all libraries listed in the "How to Replicate" section using `pip3 install pandas matplotlib python-pptx`. If the error persists, double-check your Python environment and ensure `pip3` corresponds to the `python3` interpreter you are using.
-    *   **Incorrect Python Version:** Some scripts might rely on features specific to newer Python versions. While Python 3.11+ is recommended, if you are using an older Python 3 version and encounter syntax errors or unexpected behavior, consider upgrading your Python installation.
-
-*   **File Path Errors:**
-    *   **`FileNotFoundError`**: This error typically occurs if a script cannot find an input file (like the trace file or an intermediate CSV) or cannot write to an output path. Verify the following:
-        *   You are running the scripts from the `scripts` directory as instructed.
-        *   The `PerfettoTraceForRecruitment` file is correctly placed in the `../data/` directory relative to `scripts`.
-        *   The `../results/` directory exists (it should be created if you followed the setup, but ensure it has write permissions).
-        *   The paths specified in the script execution commands in the "How to Replicate" section are accurate. If you have modified the directory structure, you will need to adjust these paths accordingly.
-
-*   **Trace File Parsing Issues:**
-    *   The scripts are tailored to the format and content of the provided `PerfettoTraceForRecruitment` file. If you attempt to use these scripts with a different trace file, they may not work correctly or may produce errors if the trace event structure or naming conventions differ significantly. The parsing logic is specific to common Perfetto event types but might not cover all possible custom events or configurations.
-    *   Large trace files can consume significant memory and time during processing. If scripts run very slowly or crash due to memory exhaustion, ensure your system has sufficient RAM. For extremely large traces, the scripts might need to be optimized for memory efficiency (e.g., by processing the trace in chunks, which is not implemented in the current versions).
-
-*   **`python-pptx` Issues:**
-    *   If the `create_presentation.py` script fails, ensure that all its input files (CSVs, markdown report, image, and the presentation guide markdown) exist in the specified `../results/` directory and are correctly named. Errors in this script can also arise if there are unexpected formats or content in these input files that the script is not designed to handle.
-    *   Ensure the `Consolidated Presentation Guide_ Perfetto Trace Analysis (Revised).md` file is present in the `../results/` directory as it is a crucial input for structuring the presentation.
-
-*   **General Script Errors:**
-    *   If a script fails with a Python traceback, examine the error message and the line of code indicated in the traceback. This can often provide clues about the nature of the problem (e.g., unexpected data type, division by zero, incorrect logic).
-    *   The scripts assume a Unix-like environment for path separators (/). If running on Windows, Python usually handles path conversions, but be mindful if you manually edit paths within the scripts.
-
-If you encounter issues not covered here, carefully review the error messages, check the script logic, and ensure your environment matches the one described in the "How to Replicate" section. Examining the intermediate CSV files can also help diagnose problems if the data being passed between scripts is not as expected.
-
-
-
 
