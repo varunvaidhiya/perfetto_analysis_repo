@@ -82,13 +82,11 @@ source venv/bin/activate
 # .\venv\Scripts\activate
 ```
 
-Once your virtual environment is activated, install the necessary libraries. The primary libraries used are `pandas` for data manipulation, `matplotlib` for plotting (used by `visualize_top_processes_cpu.py`), and `python-pptx` for creating the PowerPoint presentation (used by `create_presentation.py`). The Perfetto trace parsing itself is handled by custom logic within the scripts, which typically involves reading and processing text-based or JSON-like structures if the trace was converted, or directly interacting with Perfetto's own tools if available (though these scripts are self-contained Python). For this project, the scripts directly parse the trace file.
+Once your virtual environment is activated, install the necessary libraries. The primary libraries used are `pandas` for data manipulation, `matplotlib` for plotting (used by `visualize_top_processes_cpu.py`). The Perfetto trace parsing itself is handled by custom logic within the scripts, which typically involves reading and processing text-based or JSON-like structures if the trace was converted, or directly interacting with Perfetto's own tools if available (though these scripts are self-contained Python). For this project, the scripts directly parse the trace file.
 
-Install the libraries using the following command:
 
-```bash
-pip3 install pandas matplotlib python-pptx
-```
+
+
 
 **2. Running the Analysis Scripts:**
 
