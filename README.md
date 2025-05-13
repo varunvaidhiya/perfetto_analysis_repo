@@ -1,4 +1,4 @@
-_No response was specified_
+
 
 # Perfetto Trace Analysis 
 
