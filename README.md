@@ -37,8 +37,7 @@ This script takes the processed data from previous extraction scripts (like CPU 
 ### `visualize_top_processes_cpu.py`
 This script generates a visualization of CPU usage by the top consuming processes. It takes the CPU scheduling slice data as input and creates a bar chart or a similar plot to represent the CPU time consumed by different processes. This visual representation makes it easier to quickly identify the most CPU-intensive processes in the trace. The output is an image file (e.g., PNG). Execute with: `python3 visualize_top_processes_cpu.py ../results/cpu_sched_slices.csv ../results/top_processes_cpu_usage.png`.
 
-### `create_presentation.py`
-This script automates the creation of a PowerPoint presentation (.pptx file) summarizing the findings of the entire analysis. It likely takes various result files (CSVs, markdown reports, images) as input and compiles them into a structured presentation. This script is the final step in the automated analysis pipeline, producing a shareable summary of the work. Run it using: `python3 create_presentation.py ../results/system_info.csv ../results/cpu_sched_slices.csv ../results/thread_states.csv ../results/long_running_tasks_youtube_main.csv ../results/youtube_thread_cpu_states.csv ../results/performance_anomalies_report.md ../results/top_processes_cpu_usage.png "Consolidated Presentation Guide_ Perfetto Trace Analysis (Revised).md" ../results/Perfetto_Trace_Analysis_Presentation.pptx`. Note that this script takes multiple input files and the presentation guide as arguments to generate the final presentation.
+
 
 
 ## Results
@@ -129,11 +128,7 @@ All scripts should be run from the `scripts` directory. The commands below assum
     python3 visualize_top_processes_cpu.py ../results/cpu_sched_slices.csv ../results/top_processes_cpu_usage.png
     ```
 
-*   **Create Presentation:**
-    This script depends on all previously generated CSV files, the markdown report, the CPU usage image, and the presentation guide.
-    ```bash
-    python3 create_presentation.py ../results/system_info.csv ../results/cpu_sched_slices.csv ../results/thread_states.csv ../results/long_running_tasks_youtube_main.csv ../results/youtube_thread_cpu_states.csv ../results/performance_anomalies_report.md ../results/top_processes_cpu_usage.png "../results/Consolidated Presentation Guide_ Perfetto Trace Analysis (Revised).md" ../results/Perfetto_Trace_Analysis_Presentation.pptx
-    ```
+
 
 
 
