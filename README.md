@@ -4,7 +4,9 @@
 
 This repository contains the analysis of a Perfetto trace file, focusing on identifying performance anomalies and understanding system behavior. The project was undertaken as part of a recruitment task and demonstrates a methodical approach to trace analysis using Python scripts for data extraction and processing, culminating in a presentation of the findings.
 
-The primary goal of this analysis is to dissect the provided Perfetto trace to uncover insights into CPU usage, thread states, long-running tasks, and specific application behavior, particularly concerning YouTube application threads. By leveraging various Python scripts, we extract meaningful data from the trace, process it into human-readable formats (like CSVs and markdown reports), and visualize key metrics. This detailed examination helps in pinpointing potential performance bottlenecks and understanding the interactions between different system components during the traced period. The findings are consolidated into a comprehensive presentation, offering a clear overview of the analysis process, key observations, and actionable insights derived from the trace data. This README provides a guide to the repository structure, the data used, the scripts developed for analysis, the results obtained, and instructions on how to replicate the analysis.
+The primary goal of this analysis is to dissect the provided Perfetto trace to uncover insights into CPU usage, thread states, long-running tasks, and specific application behavior, particularly concerning YouTube application threads. By leveraging various Python scripts, I
+
+extract meaningful data from the trace, process it into human-readable formats (like CSVs and markdown reports), and visualize key metrics. This detailed examination helps in pinpointing potential performance bottlenecks and understanding the interactions between different system components during the traced period. The findings are consolidated into a comprehensive presentation, offering a clear overview of the analysis process, key observations, and actionable insights derived from the trace data. This README provides a guide to the repository structure, the data used, the scripts developed for analysis, the results obtained, and instructions on how to replicate the analysis.
 
 
 ## Data
@@ -63,7 +65,7 @@ To replicate the analysis presented in this repository, you will need to have Py
 
 **1. Environment Setup:**
 
-First, ensure you have Python 3. We recommend using Python 3.11 or newer. You can check your Python version by running `python3 --version` in your terminal.
+First, ensure you have Python 3. I recommend using Python 3.11 or newer. You can check your Python version by running `python3 --version` in your terminal.
 
 Next, you will need to install the required Python libraries. These libraries are used by the various analysis scripts. You can install them using pip, Python's package installer. It is highly recommended to use a virtual environment to manage dependencies for this project. If you have `venv` (usually included with Python 3), you can create and activate a virtual environment as follows:
 
