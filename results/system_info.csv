@@ -1,0 +1,113 @@
+name,str_value,int_value
+trace_uuid,87ee5faf-f63e-fb5d-ad31-427495fb3dea,
+trace_time_clock_id,,6.0
+system_name,Linux,
+system_version,#1 SMP PREEMPT Wed Dec 11 21:44:40 UTC 2024,
+system_release,6.1.99-android14-11-gd6f926cfde54-ab12786694,
+system_machine,aarch64,
+timezone_off_mins,,0.0
+android_build_fingerprint,google/caiman/caiman:15/BP1A.250305.020.A2/13038733:user/release-keys,
+android_device_manufacturer,Google,
+android_sdk_version,,35.0
+android_soc_model,Tensor G4,
+android_hardware_revision,MP1.0,
+android_storage_model,"128GB,Samsung",
+android_ram_model,"16GiB,Samsung,LPDDR5,0109",
+tracing_started_ns,,261336921134841.0
+all_data_source_started_ns,,261337069373366.0
+all_data_source_flushed_ns,,261342095044430.0
+tracing_disabled_ns,,261342169056108.0
+ftrace_latest_data_start_ns,,0.0
+ftrace_setup_errors,"Ftrace event unknown: raw_syscalls/sys_enter
+Ftrace event unknown: raw_syscalls/sys_exit
+Ftrace event unknown: regulator/regulator_set_voltage
+Ftrace event unknown: regulator/regulator_set_voltage_complete
+",
+trace_config_pbtxt,"buffers {
+  size_kb: 65536
+  fill_policy: DISCARD
+}
+buffers {
+  size_kb: 4096
+  fill_policy: DISCARD
+}
+data_sources {
+  config {
+    name: ""linux.ftrace""
+    ftrace_config {
+      ftrace_events: ""sched/sched_process_exit""
+      ftrace_events: ""sched/sched_process_free""
+      ftrace_events: ""task/task_newtask""
+      ftrace_events: ""task/task_rename""
+      ftrace_events: ""sched/sched_switch""
+      ftrace_events: ""power/suspend_resume""
+      ftrace_events: ""sched/sched_blocked_reason""
+      ftrace_events: ""sched/sched_wakeup""
+      ftrace_events: ""sched/sched_wakeup_new""
+      ftrace_events: ""sched/sched_waking""
+      ftrace_events: ""sched/sched_process_exit""
+      ftrace_events: ""sched/sched_process_free""
+      ftrace_events: ""task/task_newtask""
+      ftrace_events: ""task/task_rename""
+      ftrace_events: ""power/cpu_frequency""
+      ftrace_events: ""power/cpu_idle""
+      ftrace_events: ""power/suspend_resume""
+      ftrace_events: ""raw_syscalls/sys_enter""
+      ftrace_events: ""raw_syscalls/sys_exit""
+      ftrace_events: ""regulator/regulator_set_voltage""
+      ftrace_events: ""regulator/regulator_set_voltage_complete""
+      ftrace_events: ""power/clock_enable""
+      ftrace_events: ""power/clock_disable""
+      ftrace_events: ""power/clock_set_rate""
+      ftrace_events: ""power/suspend_resume""
+      disable_generic_events: true
+    }
+  }
+}
+data_sources {
+  config {
+    name: ""linux.process_stats""
+    process_stats_config {
+      scan_all_processes_on_start: true
+    }
+  }
+}
+data_sources {
+  config {
+    name: ""linux.sys_stats""
+    sys_stats_config {
+      stat_period_ms: 250
+      stat_counters: STAT_CPU_TIMES
+      stat_counters: STAT_FORK_COUNT
+      cpufreq_period_ms: 250
+    }
+  }
+}
+data_sources {
+  config {
+    name: ""android.power""
+    android_power_config {
+      battery_poll_ms: 250
+      battery_counters: BATTERY_COUNTER_CAPACITY_PERCENT
+      battery_counters: BATTERY_COUNTER_CHARGE
+      battery_counters: BATTERY_COUNTER_CURRENT
+      collect_power_rails: true
+    }
+  }
+}
+data_sources {
+  config {
+    name: ""linux.perf""
+    perf_event_config {
+      timebase {
+        frequency: 100
+        timestamp_clock: PERF_CLOCK_MONOTONIC
+      }
+      callstack_sampling {
+      }
+    }
+  }
+}
+duration_ms: 10000",
+trace_size_bytes,,3233964.0
+trace_type,proto,
