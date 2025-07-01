@@ -8,7 +8,7 @@ To calculate the percentage of time a specific thread spends in a runnable state
 
 **Concept:** Sum the duration where a thread's state is 'R' (runnable) and divide by the total duration of the thread's activity within the trace.
 
-### Example: ExoPlayer Runnable Time (Hypothetical 65%)
+
 
 ```sql
 SELECT
@@ -34,7 +34,7 @@ To determine CPU time spent by critical threads on specific core types, you need
 
 **Concept:** Sum the duration of CPU slices for specific threads on cores identified as 'LITTLE' (or inferred as such based on `cpu` column values and external knowledge of the SoC's core topology).
 
-### Example: Critical Thread CPU Time on LITTLE Cores (Hypothetical 29% / 4.76ms of 16.32ms)
+
 
 Assuming `cpu` IDs 0-3 are LITTLE cores and 4-7 are BIG cores (common for 8-core heterogeneous setups):
 
@@ -72,7 +72,7 @@ To count frequent short runs, you would typically look for `sched_slice` entries
 
 **Concept:** Count `sched_slice` entries for a thread where `dur` is below a certain threshold.
 
-### Example: ExoPlayer Short Run Count (Hypothetical 2,291)
+
 
 ```sql
 SELECT
