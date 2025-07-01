@@ -52,7 +52,7 @@ WHERE
   t.name LIKE '%ExoPlayer%' OR t.name LIKE '%CodecLooper%';
 ```
 
-*   **To get total CPU time (e.g., 16.32ms for all critical threads):**
+*   **To get total CPU time :**
 
 ```sql
 SELECT
